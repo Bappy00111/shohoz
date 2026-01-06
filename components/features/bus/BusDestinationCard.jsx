@@ -19,7 +19,7 @@ export default function BusDestinationCard({
         alt={title}
         fill
         priority={priority}
-        className="object-cover"
+        className="object-center"
         sizes="(max-width: 768px) 100vw, 50vw"
       />
 

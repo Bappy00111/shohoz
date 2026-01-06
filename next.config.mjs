@@ -30,7 +30,32 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'shohoz-event-bucket.s3.ap-south-1.amazonaws.com',
+        hostname: 'www.shutterstock.com',
+
+      },
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+
+      },
+      {
+        protocol: 'https',
+        hostname: 'ecdn.dhakatribune.net',
+
+      },
+      {
+        protocol: 'https',
+        hostname: 'somogrobangladesh.com',
+
+      },
+      {
+        protocol: 'https',
+        hostname: 'blogger.googleusercontent.com',
+
+      },
+      {
+        protocol: 'https',
+        hostname: 'dynamic-media-cdn.tripadvisor.com',
 
       },
     ],

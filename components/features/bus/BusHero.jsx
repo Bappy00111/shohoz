@@ -171,53 +171,7 @@ export default function BusHero() {
       </section>
 
       {/* Green banner (আপনার আগেরটাই রাখতে পারেন) */}
-      <section className="relative bg-gradient-to-b from-emerald-600 to-[#079d49]">
-        <div className="mx-auto max-w-7xl px-4 py-10">
-          <div className="flex flex-col items-center gap-6 text-center md:flex-row md:items-center md:justify-between md:text-left">
-            <div className="max-w-3xl">
-              <div className="flex flex-col items-center gap-3 md:flex-row md:items-start">
-                <span className="text-xl">🎉</span>
-                <div>
-                  <h2 className="text-2xl font-extrabold text-white">Welcome to a Smarter Shohoz Login!</h2>
-                  <p className="mt-2 text-white/90">
-                    If you&apos;re an existing user, just reset your password once to continue.
-                    <br />
-                    Now access Bus, Air, and Park with a single Shohoz account. Easy and secure!
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <button
-              type="button"
-              className="inline-flex h-12 items-center justify-center rounded-xl bg-white px-6 text-base font-bold text-emerald-700 shadow-sm hover:bg-gray-50"
-            >
-              Reset Password
-            </button>
-          </div>
-        </div>
-
-        {/* WhatsApp */}
-        <button
-          type="button"
-          aria-label="WhatsApp"
-          className="md:hidden fixed bottom-5 right-5 h-14 w-14 rounded-full bg-emerald-500 text-white shadow-lg flex items-center justify-center"
-        >
-          <MessageCircle className="h-6 w-6" />
-        </button>
-
-        <div className="absolute right-4 top-1/2 hidden -translate-y-1/2 md:block">
-          <button
-            type="button"
-            className="flex items-center gap-2 rounded-xl bg-black/80 px-3 py-3 text-white shadow-lg"
-            aria-label="WhatsApp"
-            style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
-          >
-            <MessageCircle className="h-5 w-5" />
-            <span className="text-sm font-semibold">WhatsApp</span>
-          </button>
-        </div>
-      </section>
+     
     </div>
   );
 }
