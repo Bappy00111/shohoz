@@ -58,6 +58,17 @@ const nextConfig = {
         hostname: 'dynamic-media-cdn.tripadvisor.com',
 
       },
+      {
+        protocol: 'https',
+        hostname: 'media.licdn.com',
+
+      },
+      {
+        protocol: 'https',
+        hostname: 'shohoz-event-bucket.s3.ap-south-1.amazonaws.com',
+
+      },
+
     ],
   },
 };

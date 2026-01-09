@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function BusDestinationCard({
   title,
@@ -7,7 +8,7 @@ export default function BusDestinationCard({
   priority = false,
 }) {
   return (
-    <div
+    <Link href={`/bus-tickets/destinations/${title.toLowerCase()}`}
       className={[
         "relative overflow-hidden rounded-2xl",
         "shadow-sm ring-1 ring-black/5",
@@ -32,6 +33,6 @@ export default function BusDestinationCard({
           {title}
         </span>
       </div>
-    </div>
+    </Link>
   );
 }

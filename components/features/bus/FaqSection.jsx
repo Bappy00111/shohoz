@@ -192,7 +192,7 @@ export default function FaqSection() {
             </p>
 
             <Link
-              href="https://www.shohoz.com/contact-us"
+              href="/contact-us"
               className="w-44 h-16 rounded-2xl bg-white hover:bg-gray-100 transition-colors flex justify-center items-center text-base font-bold text-gray-900"
             >
               Contact Us

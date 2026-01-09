@@ -21,7 +21,6 @@ export default function eventTickets() {
       <MobileAppSection />
       <TravelOptionsSection />
       <FaqSection />
-      <Footer />
 
     </>
   )

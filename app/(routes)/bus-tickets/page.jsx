@@ -17,7 +17,6 @@ export default function busTickets() {
       <TrustedShohozSection />
       <MobileAppPromo />
       <FaqSection />
-      <Footer />
     </>
   )
 }

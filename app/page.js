@@ -16,7 +16,6 @@ export default function home() {
       <TrustedShohozSection />
       <MobileAppPromo />
       <FaqSection />
-      <Footer />
     </>
   )
 }

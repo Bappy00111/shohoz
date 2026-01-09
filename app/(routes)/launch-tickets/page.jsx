@@ -15,7 +15,6 @@ export default function launchTickets() {
       <MobileAppSection />
       <TravelOptionsSection />
       <FaqSection />
-      <Footer />
     </>
   )
 }

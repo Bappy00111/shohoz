@@ -15,7 +15,6 @@ export default function airTickets() {
       <PopularDestination />
       <MobileAppPromo />
       <FaqSection />
-      <Footer />
     </>
   );
 }
