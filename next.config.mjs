@@ -68,6 +68,26 @@ const nextConfig = {
         hostname: 'shohoz-event-bucket.s3.ap-south-1.amazonaws.com',
 
       },
+      {
+        protocol: 'https',
+        hostname: 'www.3ds.com',
+
+      },
+      {
+        protocol: 'https',
+        hostname: 'assets-eu-01.kc-usercontent.com',
+
+      },
+      {
+        protocol: 'https',
+        hostname: 'content.presspage.com',
+
+      },
+      {
+        protocol: 'https',
+        hostname: 'thumbs.dreamstime.com',
+
+      },
 
     ],
   },

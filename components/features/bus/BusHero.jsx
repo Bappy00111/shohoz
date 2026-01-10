@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowLeftRight, CalendarDays, MapPin, Send, MessageCircle } from "lucide-react";
+import { ArrowLeftRight, CalendarDays, MapPin, Send } from "lucide-react";
 import { useState } from "react";
 
 function FieldShell({ label, icon, rightAddon, children }) {
@@ -10,7 +10,9 @@ function FieldShell({ label, icon, rightAddon, children }) {
       <div className="mt-1 text-emerald-600">{icon}</div>
       <div className="flex min-w-0 flex-1 flex-col">
         <div className="flex items-center justify-between gap-3">
-          <p className="text-[11px] xl:text-xs font-semibold text-emerald-600">{label}</p>
+          <p className="text-[11px] xl:text-xs font-semibold text-emerald-600">
+            {label}
+          </p>
           {rightAddon}
         </div>
         {children}
@@ -42,7 +44,9 @@ export default function BusHero() {
             onChange={() => setTripType("oneway")}
             className="h-5 w-5 accent-black"
           />
-          <span className="text-sm font-medium text-gray-900">One Way</span>
+          <span className="text-sm font-medium text-gray-900">
+            One Way
+          </span>
         </label>
 
         <label className="flex cursor-pointer items-center gap-3">
@@ -53,11 +57,13 @@ export default function BusHero() {
             onChange={() => setTripType("roundway")}
             className="h-5 w-5 accent-gray-500"
           />
-          <span className="text-sm font-medium text-gray-400">Round Way</span>
+          <span className="text-sm font-medium text-gray-400">
+            Round Way
+          </span>
         </label>
       </div>
 
-      {/* ✅ mobile/md/lg = stacked, xl+ = one row */}
+      {/* Fields */}
       <div className="grid grid-cols-1 gap-3 px-2 pb-2 xl:grid-cols-[1fr_auto_1fr_1.25fr_auto] xl:items-center">
         <FieldShell label="From" icon={<Send className="h-5 w-5" />}>
           <input
@@ -72,15 +78,7 @@ export default function BusHero() {
           type="button"
           onClick={swap}
           aria-label="Swap from and to"
-          className="
-            mx-auto -my-1 flex items-center justify-center
-            h-10 w-10 xl:h-[56px] xl:w-[56px]
-            rounded-xl xl:rounded-2xl
-            border-0 xl:border xl:border-gray-200
-            bg-transparent xl:bg-white
-            shadow-none xl:shadow-sm
-            text-indigo-900 hover:bg-gray-50 active:scale-[0.98]
-          "
+          className="mx-auto -my-1 flex h-10 w-10 xl:h-[56px] xl:w-[56px] items-center justify-center rounded-xl xl:rounded-2xl bg-transparent xl:bg-white xl:border xl:border-gray-200 xl:shadow-sm text-indigo-900 hover:bg-gray-50 active:scale-[0.98]"
         >
           <ArrowLeftRight className="h-6 w-6" />
         </button>
@@ -98,7 +96,10 @@ export default function BusHero() {
           label="Journey Date"
           icon={<CalendarDays className="h-5 w-5" />}
           rightAddon={
-            <button type="button" className="text-[11px] xl:text-xs font-semibold text-orange-500 hover:text-orange-600">
+            <button
+              type="button"
+              className="text-[11px] xl:text-xs font-semibold text-orange-500 hover:text-orange-600"
+            >
               + ADD RETURN TRIP
             </button>
           }
@@ -111,33 +112,24 @@ export default function BusHero() {
           />
         </FieldShell>
 
-         <button
-            type="button"
-            className="
-              h-14 xl:h-full md:w-[180px]
-              rounded-xl
-              bg-emerald-600
-              text-sm font-extrabold tracking-wide
-              text-white
-              transition hover:bg-emerald-700
-            "
-          >
-            SEARCH
-          </button>
+        <button
+          type="button"
+          className="h-14 xl:h-full md:w-[180px] rounded-xl bg-emerald-600 text-sm font-extrabold tracking-wide text-white transition hover:bg-emerald-700"
+        >
+          SEARCH
+        </button>
       </div>
     </div>
   );
 
   return (
     <div className="w-full">
-      {/* ✅ MOBILE / MD / LG: TOP IMAGE STRIP */}
+      {/* MOBILE / TABLET */}
       <section className="xl:hidden">
-        {/* top strip image */}
-        <div className="relative w-full overflow-hidden
-                        h-[90px] sm:h-[120px] md:h-[150px] lg:h-[180px]">
+        <div className="relative h-[120px] sm:h-[120px] md:h-[150px] lg:h-[180px] w-full overflow-hidden">
           <Image
-            src="https://s3-ap-south-1.amazonaws.com/shohoz-bus/prod/hero-illustration-16-07-2025.webp?v=1.0.3"
-            alt="Hero background"
+            src="https://assets-eu-01.kc-usercontent.com/cce44467-0106-013b-6c0b-26132a361492/be43c251-943c-4d66-89f1-02c5d1772b95/NB_1494161_RefinishNewSitePageImagery_BUSHERO.png"
+            alt="Bus booking hero background"
             fill
             priority
             sizes="100vw"
@@ -145,33 +137,29 @@ export default function BusHero() {
           />
         </div>
 
-        {/* card below (slight overlap optional) */}
-        <div className="mx-auto max-w-7xl px-3 sm:px-4 -mt-8 sm:-mt-10 md:-mt-12 pb-8">
+        <div className="mx-auto max-w-7xl px-3 sm:px-4 -mt-12 sm:-mt-10 md:-mt-12 pb-8">
           {HeroCard}
         </div>
       </section>
 
-      {/* ✅ XL+: FULL HERO BACKGROUND (আপনার desktop look) */}
-      <section className="relative hidden xl:block isolate overflow-hidden min-h-[400px]">
+      {/* DESKTOP */}
+      <section className="relative hidden xl:block isolate overflow-hidden min-h-[450px]">
         <div className="absolute inset-0">
           <Image
-            src="https://s3-ap-south-1.amazonaws.com/shohoz-bus/prod/hero-illustration-16-07-2025.webp?v=1.0.3"
-            alt="Hero background"
+            src="https://assets-eu-01.kc-usercontent.com/cce44467-0106-013b-6c0b-26132a361492/be43c251-943c-4d66-89f1-02c5d1772b95/NB_1494161_RefinishNewSitePageImagery_BUSHERO.png"
+            alt="Bus booking hero background"
             fill
             priority
             sizes="100vw"
-            className="object-center"
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-white/10" />
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-4 pt-44 pb-10">
+        <div className="relative mx-auto max-w-7xl px-4 pt-56 pb-10">
           {HeroCard}
         </div>
       </section>
-
-      {/* Green banner (আপনার আগেরটাই রাখতে পারেন) */}
-     
     </div>
   );
 }

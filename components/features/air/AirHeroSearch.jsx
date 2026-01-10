@@ -135,9 +135,9 @@ export default function BusHero() {
       <section className="xl:hidden">
         {/* top strip image */}
         <div className="relative w-full overflow-hidden
-                        h-[90px] sm:h-[120px] md:h-[150px] lg:h-[180px]">
+                        h-[120px] sm:h-[120px] md:h-[150px] lg:h-[180px]">
           <Image
-            src={air}
+            src="https://thumbs.dreamstime.com/b/airplane-taxiing-to-runway-take-off-sunset-318894290.jpg"
             alt="Hero background"
             fill
             priority
@@ -147,16 +147,16 @@ export default function BusHero() {
         </div>
 
         {/* card below (slight overlap optional) */}
-        <div className="mx-auto max-w-7xl px-3 sm:px-4 -mt-8 sm:-mt-10 md:-mt-12 pb-8">
+        <div className="mx-auto max-w-7xl px-3 sm:px-4 -mt-12 sm:-mt-10 md:-mt-12 pb-8">
           {HeroCard}
         </div>
       </section>
 
       {/* ✅ XL+: FULL HERO BACKGROUND (আপনার desktop look) */}
-      <section className="relative hidden xl:block isolate overflow-hidden min-h-[400px]">
+      <section className="relative hidden xl:block isolate overflow-hidden min-h-[450px]">
         <div className="absolute inset-0">
           <Image
-            src={air}
+            src="https://thumbs.dreamstime.com/b/airplane-taxiing-to-runway-take-off-sunset-318894290.jpg"
             alt="Hero background"
             fill
             priority
@@ -166,7 +166,7 @@ export default function BusHero() {
           <div className="absolute inset-0 bg-white/10" />
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-4 pt-44 pb-10">
+        <div className="relative mx-auto max-w-7xl px-4 pt-56 pb-10">
           {HeroCard}
         </div>
       </section>
