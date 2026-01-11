@@ -44,8 +44,9 @@ function DestinationCard({ item }) {
           shadow-[0_18px_45px_rgba(0,0,0,0.12)]
           ring-1 ring-black/5
           transition hover:-translate-y-1 hover:shadow-[0_26px_60px_rgba(0,0,0,0.16)]
+          w-[350px] lg:w-[220px] h-[330px]
         "
-        style={{ width: 210, height: 330 }} // ✅ screenshot-like fixed card size
+        // style={{ width: 380 lg:width: 210, height: 330 }} // ✅ screenshot-like fixed card size
       >
         <Image
           src={item.img}
@@ -80,9 +81,9 @@ export default function PopularDestination() {
         <div
           className="
             mt-12 grid justify-items-center
-            grid-cols-2 gap-6
-            sm:grid-cols-3 sm:gap-8
-            lg:grid-cols-5 lg:gap-10
+            grid-cols-1 gap-6
+            sm:grid-cols-2 sm:gap-8
+            lg:grid-cols-4  xl:grid-cols-5 lg:gap-10
           "
         >
           {DESTINATIONS.map((item) => (

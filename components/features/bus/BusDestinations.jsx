@@ -134,23 +134,23 @@ export default function BusDestinations() {
             <BusDestinationCard
               title="Rajshahi"
               imageSrc="https://ecdn.dhakatribune.net/contents/cache/images/640x0x1/uploads/media/2023/09/13/Rajshahi-Development-5-f6819dd6ea94084fd01a011dac7ca45d.jpg"
-              className="col-span-12 md:col-span-6 h-[220px] md:h-[260px]"
+              className="col-span-12 md:col-span-4 h-[220px] md:h-[260px]"
             />
             <BusDestinationCard
               title="Rangpur"
               imageSrc="https://somogrobangladesh.com/wp-content/uploads/2025/01/Tajhat-Palace.png"
-              className="col-span-12 md:col-span-6 h-[220px] md:h-[260px]"
+              className="col-span-12 md:col-span-4 h-[220px] md:h-[260px]"
             />
             <BusDestinationCard
               title="Sylhet"
               imageSrc="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiYdqLhlx4VdkF2vBRCYh-EsI7RFuTxs2h18NWh4indp_Gih0bkikrMVW3HToBQte2hU36_1iwDAslQVjWLMJi0DyU_Sihv7IgaId7bQN6BnaKoSmp7ZTl6gf6YA7EymU_rL5wtzj4Lg_QgIfgG7TQvvScT1WIprpF9MSkGwJNXTpiEkRyrZGhTf7zqvw/s696/blogUpWH4pHhqMkeBCtkAG0sRo1OavrcsHt0.jpg"
-              className="col-span-12 md:col-span-6 h-[220px] md:h-[260px]"
+              className="col-span-12 md:col-span-4 h-[220px] md:h-[260px]"
             />
-            <BusDestinationCard
+            {/* <BusDestinationCard
               title="Dinajpur"
               imageSrc="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/55/96/11/kantajew-temple-kantajew.jpg?w=500&h=500&s=1"
               className="col-span-12 md:col-span-6 h-[220px] md:h-[260px]"
-            />
+            /> */}
           </div>
         </div>
 
