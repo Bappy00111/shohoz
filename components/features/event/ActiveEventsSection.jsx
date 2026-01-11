@@ -8,7 +8,7 @@ const events = [
     description:
       "HR Exchange Network presents a refreshing morning session with industry’s top minds — where coffee meets creativity and knowledge brews success.",
     image:
-      "https://www.shohoz.com/event-tickets/events/img/morning-brew-with-leaders-episode-3/morning-brew-with-leaders-episode-3.webp?v=43",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjgzPMvBrbLPliK-kjJE6Nm8pL_FxvI7_wKA&s",
     href: "/event-tickets/morning-brew-with-leaders-episode-3",
   },
 ];
@@ -16,7 +16,7 @@ const events = [
 export default function ActiveEventsSection() {
   return (
     <section className="bg-gray-50">
-      <div className="mx-auto max-w-6xl px-4 py-10">
+      <div className="mx-auto max-w-7xl px-4 py-10">
       {/* Section Title */}
       <h2 className="mb-8 text-lg font-bold text-[#079d49]">
         Active Events

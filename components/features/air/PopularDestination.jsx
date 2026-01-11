@@ -70,7 +70,7 @@ function DestinationCard({ item }) {
 export default function PopularDestination() {
   return (
     <section className="bg-[#f3f6f5]">
-      <div className="mx-auto max-w-6xl px-4 py-14">
+      <div className="mx-auto max-w-7xl px-4 py-14">
         {/* ✅ centered big green title */}
         <h2 className="text-center text-4xl font-extrabold text-emerald-600">
           Popular Destination

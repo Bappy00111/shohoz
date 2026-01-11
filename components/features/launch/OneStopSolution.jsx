@@ -42,7 +42,7 @@ function ServiceCard({ iconKey, title, highlight, description }) {
 export default function OneStopSolution() {
   return (
     <section className="py-12 md:py-16 bg-gray-50">
-      <div className="mx-auto max-w-6xl px-4">
+      <div className="mx-auto max-w-7xl px-4">
         {/* Small Heading */}
         <p className="text-base md:text-[20px] font-semibold text-[#ffa900] text-center uppercase tracking-widest">
           A one-stop solution for your travel needs

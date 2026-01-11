@@ -335,7 +335,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [search, setSearch] = useState("");
 
-  const iconClass = "text-[20px]";
+  const iconClass = "text-[18px]";
 
   const mainItems = useMemo(
     () => [
@@ -367,10 +367,9 @@ export default function Navbar() {
     setSearch("");
   };
 
-  // body scroll lock (same behavior)
+  // body scroll lock
   useEffect(() => {
-    if (mobileOpen) document.body.style.overflow = "hidden";
-    else document.body.style.overflow = "";
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
     return () => (document.body.style.overflow = "");
   }, [mobileOpen]);
 
@@ -380,8 +379,9 @@ export default function Navbar() {
       <Link
         href={item.href}
         onClick={() => setMobileOpen(false)}
-        className={`flex items-center gap-3 px-5 py-3 text-[15px] font-medium ${active ? "text-[#079D49]" : "text-[#111] hover:text-[#079D49]"
-          }`}
+        className={`flex items-center gap-3 px-5 py-3 text-[15px] font-medium ${
+          active ? "text-[#079D49]" : "text-[#111] hover:text-[#079D49]"
+        }`}
       >
         {item.icon}
         {item.title}
@@ -392,85 +392,67 @@ export default function Navbar() {
   return (
     <>
       {/* ================= NAVBAR ================= */}
-      <div id="navbar" className="fixed top-0 z-50 h-[70px] w-full">
-        <div className="h-[70px] border-b border-[#EEEEEE] bg-white">
-          <div className="mx-auto h-full max-w-6xl px-4 md:px-2.5">
+      <div className="fixed top-0 z-50 w-full">
+        <div className="h-[70px] border-b border-[#EEEEEE] bg-white shadow-[0_1px_8px_rgba(0,0,0,0.05)]">
+          <div className="mx-auto h-full max-w-7xl px-4 md:px-2.5">
             <div className="flex h-full items-center justify-between">
-              {/* Left */}
+              {/* LEFT */}
               <div className="flex items-center">
                 <Link href="/" className="flex items-center">
-                  <Image src={logo} alt="Logo" width={100} height={19} priority />
+                  <Image src={logo} alt="Logo" width={110} height={22} priority />
                 </Link>
 
-                {/* Desktop Menu (UNCHANGED for lg) */}
-                <div className="ml-[44px] hidden items-center lg:flex">
+                {/* DESKTOP MENU */}
+                <div className="ml-10 hidden items-center lg:flex">
                   {mainItems.map((item) => (
                     <Link
                       key={item.title}
                       href={item.href}
-                      className={`mr-2 flex h-10 w-[100px] items-center justify-center rounded-[10px] border-2 text-xs font-semibold ${isActive(item.href)
-                        ? "border-[#B4E1C8] text-[#079D49]"
-                        : "border-transparent hover:border-[#B4E1C8] hover:text-[#079D49]"
-                        }`}
+                      className={`mr-2 flex h-9 items-center gap-1 rounded-full px-4 text-xs font-semibold transition ${
+                        isActive(item.href)
+                          ? "bg-[#079D49]/10 text-[#079D49]"
+                          : "text-gray-600 hover:bg-[#079D49]/10 hover:text-[#079D49]"
+                      }`}
                     >
                       {item.icon}
-                      <span className="ml-1.5">{item.title}</span>
+                      {item.title}
                     </Link>
                   ))}
 
-                  {/* 🔍 Search Bar (ONLY XL, SAFE – PROFESSIONAL) */}
+                  {/* SEARCH (XL only) */}
                   <form
                     onSubmit={handleSearch}
-                    className="
-    ml-4 hidden xl:flex
-    h-11 w-[280px]
-    items-center
-    rounded-full
-    border border-[#079D49]/30
-    bg-white
-    px-4
-    shadow-[0_1px_6px_rgba(0,0,0,0.06)]
-    transition
-    focus-within:border-[#079D49]
-    focus-within:shadow-[0_2px_10px_rgba(7,157,73,0.25)]
-  "
+                    className="ml-4 hidden xl:flex h-10 w-[280px] items-center rounded-full border border-[#079D49]/30 bg-white px-4 transition focus-within:border-[#079D49]"
                   >
-                    <FiSearch className="text-[18px] text-gray-400" />
-
+                    <FiSearch className="text-[16px] text-gray-400" />
                     <input
-                      type="text"
                       value={search}
                       onChange={(e) => setSearch(e.target.value)}
                       placeholder="Search bus, air, launch, event"
-                      className="
-                        ml-2
-                        w-full
-                        bg-transparent
-                        text-sm
-                        font-medium
-                        text-gray-700
-                        outline-none
-                        placeholder:text-gray-400
-                      "
+                      className="ml-2 w-full bg-transparent text-sm outline-none placeholder:text-gray-400"
                     />
-
-
                   </form>
-
                 </div>
               </div>
 
-              {/* Right */}
+              {/* RIGHT */}
               <div className="hidden items-center gap-3 lg:flex">
                 <a
                   href="tel:01886669330"
-                  className="rounded-2xl bg-[#f88922] px-6 py-2.5 text-xs font-semibold text-white"
+                  className="rounded-full bg-[#f88922] px-5 py-2 text-xs font-semibold text-white"
                 >
                   📞 01886669330-01975459519
                 </a>
+
+                <Link
+                  href="/login"
+                  className="rounded-full border border-[#079D49] px-5 py-2 text-xs font-semibold text-[#079D49] transition hover:bg-[#079D49] hover:text-white"
+                >
+                  Login
+                </Link>
               </div>
 
-              {/* Mobile Toggle */}
+              {/* MOBILE TOGGLE */}
               <button
                 className="ml-2 flex h-10 w-10 items-center justify-center lg:hidden"
                 onClick={() => setMobileOpen(true)}
@@ -482,32 +464,38 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* ===== Mobile Overlay + Left Drawer ===== */}
-      {/* Overlay (EXACT SAME AS YOUR CODE) */}
+      {/* ================= MOBILE OVERLAY ================= */}
       <div
-        className={
-          "fixed inset-0 z-[60] bg-black/40 transition-opacity duration-300 " +
-          (mobileOpen ? "opacity-100" : "pointer-events-none opacity-0")
-        }
+        className={`fixed inset-0 z-[60] bg-black/40 transition-opacity ${
+          mobileOpen ? "opacity-100" : "pointer-events-none opacity-0"
+        }`}
         onClick={() => setMobileOpen(false)}
-        aria-hidden="true"
       />
 
-      {/* Drawer */}
+      {/* ================= MOBILE DRAWER ================= */}
       <aside
-        className={
-          "fixed left-0 top-0 z-[70] h-full w-[300px] max-w-[85%] bg-white shadow-xl " +
-          "transition-transform duration-300 ease-out " +
-          (mobileOpen ? "translate-x-0" : "-translate-x-full")
-        }
+        className={`fixed left-0 top-0 z-[70] h-full w-[300px] max-w-[85%] bg-white shadow-xl transition-transform ${
+          mobileOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
       >
-        <div className="flex items-center justify-end border-b border-gray-200 px-5 py-4">
+        {/* Drawer Header (Brand first) */}
+        <div className="flex items-center justify-between border-b border-gray-200 px-5 py-4">
+          <Image src={logo} alt="Logo" width={90} />
           <button onClick={() => setMobileOpen(false)}>
             <RiCloseLargeLine className="text-[22px]" />
           </button>
         </div>
 
-        <div className="py-2">
+        {/* Login CTA */}
+        <Link
+          href="/login"
+          onClick={() => setMobileOpen(false)}
+          className="mx-5 mt-4 block rounded-xl bg-[#079D49] py-2 text-center text-sm font-semibold text-white"
+        >
+          Login
+        </Link>
+
+        <div className="mt-4 py-2">
           {mainItems.map((item) => (
             <RowLink key={item.title} item={item} />
           ))}
@@ -533,5 +521,6 @@ export default function Navbar() {
     </>
   );
 }
+
 
 

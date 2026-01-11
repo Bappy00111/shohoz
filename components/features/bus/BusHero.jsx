@@ -33,7 +33,7 @@ export default function BusHero() {
   };
 
   const HeroCard = (
-    <div className="mx-auto w-full max-w-[560px] md:max-w-[680px] lg:max-w-[860px] xl:max-w-6xl rounded-[28px] bg-white/95 p-4 shadow-[0_18px_50px_rgba(0,0,0,0.12)] ring-1 ring-black/5 backdrop-blur">
+    <div className="mx-auto w-full max-w-[560px] md:max-w-[680px] lg:max-w-[860px] xl:max-w-7xl rounded-[28px] bg-white/95 p-4 shadow-[0_18px_50px_rgba(0,0,0,0.12)] ring-1 ring-black/5 backdrop-blur">
       {/* Trip type */}
       <div className="flex items-center gap-10 px-2 pb-3 pt-1">
         <label className="flex cursor-pointer items-center gap-3">
@@ -143,7 +143,7 @@ export default function BusHero() {
       </section>
 
       {/* DESKTOP */}
-      <section className="relative hidden xl:block isolate overflow-hidden min-h-[450px]">
+      <section className="relative hidden xl:block isolate overflow-hidden min-h-[500px]">
         <div className="absolute inset-0">
           <Image
             src="https://assets-eu-01.kc-usercontent.com/cce44467-0106-013b-6c0b-26132a361492/be43c251-943c-4d66-89f1-02c5d1772b95/NB_1494161_RefinishNewSitePageImagery_BUSHERO.png"
@@ -156,7 +156,7 @@ export default function BusHero() {
           <div className="absolute inset-0 bg-white/10" />
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-4 pt-56 pb-10">
+        <div className="relative mx-auto max-w-7xl px-4 pt-64 pb-10">
           {HeroCard}
         </div>
       </section>

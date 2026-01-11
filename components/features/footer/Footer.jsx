@@ -93,7 +93,7 @@ function SocialIcon({ href, label, children }) {
 export default function Footer() {
   return (
     <footer className="bg-white border-t border-gray-200 px-4 pt-12 pb-8 sm:px-10">
-      <div className="mx-auto w-full max-w-6xl">
+      <div className="mx-auto w-full max-w-7xl">
         {/* TOP */}
         <div className="flex flex-col lg:flex-row justify-between gap-12">
           {/* Brand */}

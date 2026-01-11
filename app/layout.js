@@ -12,9 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={libreFranklin.className}>
-        <Navbar />
-        <main className="pt-[70px]">{children}</main>
-        <Footer/>
+        <main className="">{children}</main>
       </body>
     </html>
   );

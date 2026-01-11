@@ -45,7 +45,7 @@ function StepItem({ Icon, title, desc }) {
 export default function LaunchPurchaseSteps() {
   return (
     <section className="w-full bg-white">
-      <div className="mx-auto max-w-6xl px-4 py-10 md:py-14 text-2xl md:text-[36px]">
+      <div className="mx-auto max-w-7xl px-4 py-10 md:py-14 text-2xl md:text-[36px]">
         {/* Heading (green + black like screenshot) */}
         <h2 className="text-center text-3xl font-semibold md:text-[36px]">
           <span className="text-[#0b7a59]">Buy launch tickets</span>{" "}

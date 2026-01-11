@@ -11,7 +11,7 @@ const benefits = [
 export default function MobileAppSection() {
   return (
     <section className="py-10 md:py-16 bg-white">
-      <div className="container mx-auto px-4">
+      <div className="mx-auto max-w-7xl px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center ">
 
           {/* Left Image */}

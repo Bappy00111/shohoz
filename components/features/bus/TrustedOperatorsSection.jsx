@@ -46,7 +46,7 @@ function OperatorCard({ name, logo }) {
 export default function TrustedOperatorsSection() {
   return (
     <section className="bg-white py-12 md:py-16 w-full overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 md:px-2.5 flex flex-col md:flex-row justify-between md:items-center mb-8">
+      <div className="max-w-7xl mx-auto px-4 md:px-2.5 flex flex-col md:flex-row justify-between md:items-center mb-8">
         <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 md:mb-0">
           More Than <span className="text-green-600">100+</span> Trusted Bus Operators
         </h2>

@@ -30,7 +30,7 @@ function BulletIcon() {
 export default function MobileAppPromo() {
   return (
     <section className="bg-white py-6 sm:py-12">
-      <div className="mx-auto w-full max-w-6xl px-4">
+      <div className="mx-auto w-full max-w-7xl px-4">
         <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-8 rounded-2xl p-4 sm:p-6">
           {/* Left image */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">

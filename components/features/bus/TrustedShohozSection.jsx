@@ -1,7 +1,7 @@
 export default function TrustedShohozSection() {
   return (
     <section className="bg-gray-50 py-12 md:py-24 px-6">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-800">

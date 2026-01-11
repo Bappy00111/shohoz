@@ -175,7 +175,7 @@ export default function FaqSection() {
 
   return (
     <section className="py-5 lg:py-20 lg:px-6 bg-gradient-to-r from-[#318f72] to-[#36ae89]">
-      <div className="mx-auto w-full max-w-6xl px-4 lg:px-0">
+      <div className="mx-auto w-full max-w-7xl px-4 lg:px-0">
         <div className="flex flex-col md:flex-row justify-between gap-10">
           {/* Left */}
           <div className="flex flex-col w-full lg:w-1/3 lg:py-5 lg:pr-5">

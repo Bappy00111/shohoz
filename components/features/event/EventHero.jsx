@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { MapPin, CalendarDays } from "lucide-react";
+import event from '../../../public/img//event/people-taking-part-high-protocol-event.jpg'
 
 /* Reusable field shell */
 function FieldShell({ label, icon, children }) {
@@ -18,10 +19,12 @@ function FieldShell({ label, icon, children }) {
   );
 }
 
+ const HERO_IMAGE = event;
+
 export default function EventHero() {
   /* Floating filter card */
   const HeroCard = (
-    <div className="mx-auto w-full max-w-[560px] md:max-w-[680px] lg:max-w-[860px] xl:max-w-6xl rounded-[28px] bg-white/95 p-4 shadow-[0_18px_50px_rgba(0,0,0,0.12)] ring-1 ring-black/5 backdrop-blur">
+    <div className="mx-auto w-full max-w-[560px] md:max-w-[680px] lg:max-w-[860px] xl:max-w-7xl rounded-[28px] bg-white/95 p-4 shadow-[0_18px_50px_rgba(0,0,0,0.12)] ring-1 ring-black/5 backdrop-blur">
 
       {/* ✅ Filter UI only */}
       <div className="grid grid-cols-1 gap-3 px-2 pb-2 md:grid-cols-2 xl:grid-cols-[1.5fr_1.5fr_auto] xl:items-center">
@@ -68,9 +71,9 @@ export default function EventHero() {
       {/* ✅ MOBILE / MD / LG */}
       <section className="xl:hidden">
         {/* Hero image strip */}
-        <div className="relative w-full overflow-hidden h-[90px] sm:h-[120px] md:h-[150px] lg:h-[180px]">
+        <div className="relative w-full overflow-hidden h-[120px] sm:h-[120px] md:h-[150px] lg:h-[180px]">
           <Image
-            src="https://shohoz-event-bucket.s3.ap-south-1.amazonaws.com/prod/banner/Event-web-banner-morning-brew-with-leaders-episode-3-1350x291.webp"
+            src= {event}
             alt="Hero background"
             fill
             priority
@@ -80,16 +83,16 @@ export default function EventHero() {
         </div>
 
         {/* Floating card */}
-        <div className="mx-auto max-w-7xl px-3 sm:px-4 -mt-8 sm:-mt-10 md:-mt-12 pb-8">
+        <div className="mx-auto max-w-7xl px-3 sm:px-4 -mt-12 sm:-mt-10 md:-mt-12 pb-8">
           {HeroCard}
         </div>
       </section>
 
       {/* ✅ XL+ DESKTOP */}
-      <section className="relative hidden xl:block isolate overflow-hidden min-h-[400px]">
+      <section className="relative hidden xl:block isolate overflow-hidden min-h-[500px]">
         <div className="absolute inset-0">
           <Image
-            src="https://shohoz-event-bucket.s3.ap-south-1.amazonaws.com/prod/banner/Event-web-banner-morning-brew-with-leaders-episode-3-1350x291.webp"
+            src= {event}
             alt="Hero background"
             fill
             priority
@@ -101,7 +104,7 @@ export default function EventHero() {
           <div className="absolute inset-0 bg-black/40" />
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-4 pt-48 pb-10">
+        <div className="relative mx-auto max-w-7xl px-4 pt-64 pb-10">
           {HeroCard}
         </div>
       </section>

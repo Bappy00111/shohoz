@@ -90,7 +90,7 @@ export default function BusDestinations() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(2,6,23,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(2,6,23,0.03)_1px,transparent_1px)] bg-[size:24px_24px]" />
       </div>
 
-      <div className="relative mx-auto w-full max-w-[560px] px-4 md:max-w-[680px] md:px-2.5 lg:max-w-[860px] xl:max-w-6xl">
+      <div className="relative mx-auto w-full max-w-[560px] px-4 md:max-w-[680px] md:px-2.5 lg:max-w-[860px] xl:max-w-7xl">
         {/* Header */}
         <div className="mx-auto max-w-2xl text-center">
           {/* <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-4 py-2 shadow-sm backdrop-blur">
