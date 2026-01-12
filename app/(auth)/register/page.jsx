@@ -59,7 +59,7 @@ export default function RegisterPage() {
       </div>
 
       {/* RIGHT SIDE */}
-      <div className="flex w-full flex-col justify-between px-6 py-8 md:w-1/2 md:px-14">
+      <div className="flex w-full flex-col justify-between px-3 lg:px-6  md:w-1/2 md:px-14">
         {/* LOGO */}
         <Link href="/" className="flex justify-end">
           <Image src={logo} alt="Bangladesh Ticket Service" width={150} height={50} />
@@ -67,7 +67,7 @@ export default function RegisterPage() {
 
         {/* FORM */}
         <div className="flex flex-1 items-center justify-center">
-          <form className="w-full max-w-md rounded-2xl bg-white p-8 shadow-lg">
+          <form className="w-full max-w-xl rounded-2xl  p-8 ">
             <h2 className="mb-2 text-3xl font-bold text-gray-800">
               Create an account
             </h2>

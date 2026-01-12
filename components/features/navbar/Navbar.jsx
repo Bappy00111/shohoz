@@ -441,7 +441,7 @@ export default function Navbar() {
                   href="tel:01886669330"
                   className="rounded-full bg-[#f88922] px-5 py-2 text-xs font-semibold text-white"
                 >
-                  📞 01886669330-01975459519
+                  📞 01886669330 - 01975459519
                 </a>
 
                 <Link
@@ -474,7 +474,7 @@ export default function Navbar() {
 
       {/* ================= MOBILE DRAWER ================= */}
       <aside
-        className={`fixed left-0 top-0 z-[70] h-full w-[300px] max-w-[85%] bg-white shadow-xl transition-transform ${
+        className={`fixed left-0 top-0 z-[70] h-full w-[300px] max-w-[85%] bg-white shadow-xl transition-transform duration-300 ${
           mobileOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -486,14 +486,7 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Login CTA */}
-        <Link
-          href="/login"
-          onClick={() => setMobileOpen(false)}
-          className="mx-5 mt-4 block rounded-xl bg-[#079D49] py-2 text-center text-sm font-semibold text-white"
-        >
-          Login
-        </Link>
+
 
         <div className="mt-4 py-2">
           {mainItems.map((item) => (
@@ -517,6 +510,15 @@ export default function Navbar() {
             01886669330-01975459519
           </a>
         </div>
+
+        {/* Login CTA */}
+        <Link
+          href="/login"
+          onClick={() => setMobileOpen(false)}
+          className="mx-5 mt-4 block rounded-xl bg-[#079D49] py-2 text-center text-sm font-semibold text-white"
+        >
+          Login
+        </Link>
       </aside>
     </>
   );
